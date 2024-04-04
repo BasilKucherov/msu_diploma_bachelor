@@ -1,0 +1,43 @@
+{
+    "train": {
+        "type": "usual",
+        "classes": ["on", "off", "up", "down", "right", "left", "yes", "no", "go", "stop"],
+        "samples_per_class": 1250,
+        "original_set": ["TRAIN"],
+        "dir": "./splits",
+        "name": "sc_train_25cs_1250spc.csv"
+    },
+    "valid": {
+        "type": "usual",
+        "classes": ["on", "off", "up", "down", "right", "left", "yes", "no", "go", "stop"],
+        "samples_per_class": 128,
+        "original_set": ["VALID"],
+        "dir": "./splits",
+        "name": "sc_valid_25cs_1250spc.csv"
+    },
+    "test": {
+        "type": "usual",
+        "classes": ["on", "off", "up", "down", "right", "left", "yes", "no", "go", "stop"],
+        "samples_per_class": 155,
+        "original_set": ["VALID"],
+        "dir": "./splits",
+        "name": "sc_test_25cs_1250spc.csv"
+    },
+    "fsl_train": {
+        "type": "fsl",
+        "classes": ["on", "off", "up", "down", "right", "left", "yes", "no", "go", "stop"],
+        "samples_per_class": [1, 5],
+        "packs_number": 10,
+        "original_set": ["TRAIN"],
+        "dir": "./splits",
+        "name": "sc_fsl_train_0spc_pack00.csv"
+    },
+    "fsl_test": {
+        "type": "usual",
+        "classes": ["on", "off", "up", "down", "right", "left", "yes", "no", "go", "stop"],
+        "samples_per_class": 396,
+        "original_set": ["TEST"],
+        "dir": "./splits",
+        "name": "sc_fsl_test.csv"
+    }
+}

@@ -1,0 +1,31 @@
+{
+    "name": "LiftedStructuredLoss_MSWC_EN_100CS_500SPC",
+    "dir": "experiments",
+    "model": {
+        "name": "DSCNN",
+        "n_mels": 32,
+        "in_channels": 1,
+        "ds_cnn_number": 6,
+        "ds_cnn_size": 64,
+        "is_classifier": false,
+        "classes_number": 0
+    },
+    "train_dataset": {
+        "root": "/home/basil/mswc/audio/en/clips",
+        "split_path": "splits/mswc_en_train_100cs_500spc.csv",
+        "background_noise_path": "/home/basil/speech_commands_v2/_background_noise_"
+    },
+    "valid_dataset": {
+        "root": "/home/basil/mswc/audio/en/clips",
+        "split_path": "splits/mswc_en_valid_100cs_500spc.csv",
+        "background_noise_path": "/home/basil/speech_commands_v2/_background_noise_"
+    },
+    "loss": {
+        "name": "LiftedStructuredLoss",
+        "margin": 5
+    },
+    "batch_size": 128,
+    "n_epoch": 200,
+    "learning_rate": 0.0001,
+    "optimizer": "Adam"
+}
